@@ -12,8 +12,6 @@ import EditAuction from "../components/EditAuction";
 // import Notifications from "../components/Notifications";
 // import AccountSetting from "../components/AccountSetting";
 // import {SellerRoutes} from '../auth/Protected'
-// import PaymentMethod from "../components/PaymentMethod";
-// import Cart from "../components/Cart";
 import ErrorPage from "./ErrorPage";
 import AllCategories from "../components/AllCategories";
 import EditCategory from "../components/EditCategory";
@@ -51,8 +49,6 @@ const Dashboard = () => {
           <Route path="/notifications" element={<Notifications />} />
           <Route path="/account-settings" element={<AccountSetting />} />
           <Route path="/change-password" element={<ChangePassword />} />
-          <Route path="/payment-method" element={<PaymentMethod />} />
-          <Route path="/cart" element={<Cart />} />
 
           <Route path="/logout" element={<ChangePassword />} />
           <Route path="*" element={<ErrorPage />} /> */}

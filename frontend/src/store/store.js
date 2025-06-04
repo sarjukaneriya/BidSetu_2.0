@@ -6,7 +6,6 @@ import categoryReducer from './category/categorySlice';
 import cityReducer from './city/citySlice';
 import bidReducer from './bid/bidSlice';
 import notificationReducer from './notification/notificationSlice';
-import cartReducer from "./cart/cartSlice"
 import userReducer from "./user/userSlice"
 
 export const store= configureStore({
@@ -18,7 +17,6 @@ export const store= configureStore({
         city: cityReducer,
         bid: bidReducer,
         notification: notificationReducer,
-        cart: cartReducer,
         user:userReducer,
 
 
