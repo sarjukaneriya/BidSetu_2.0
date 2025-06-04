@@ -44,6 +44,7 @@ export const postRFQ = asyncHandler(async (req, res) => {
   res.status(201).json(new ApiResponse(201, "RFQ created", rfq));
 });
 
+
 export const getMyRFQs = asyncHandler(async (req, res) => {
   const rfqs = await RFQ.find({ buyerId: req.user._id });
   res.json(new ApiResponse(200, "My RFQs", rfqs));
@@ -53,6 +54,7 @@ export const getOpenRFQs = asyncHandler(async (req, res) => {
   const rfqs = await RFQ.find({ status: "Open" });
   res.json(new ApiResponse(200, "Open RFQs", rfqs));
 });
+
 
 export const submitQuote = asyncHandler(async (req, res) => {
   const { price, deliveryDays, gstIncluded, comment } = req.body;
