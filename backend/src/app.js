@@ -25,6 +25,7 @@ import bidRouter from "./routes/bid.routes.js";
 import notificationRouter from "./routes/notification.routes.js";
 import paymentRouter from "./routes/payment.routes.js";
 import cartRouter from "./routes/cart.routes.js"
+import rfqRouter from "./routes/rfq.routes.js";
 
 
 
@@ -38,6 +39,7 @@ app.use("/api/v1/bids",bidRouter);
 app.use("/api/v1/notifications",notificationRouter);
 app.use("/api/v1/payments",paymentRouter);
 app.use("/api/v1/cart", cartRouter)
+app.use("/api/rfq", rfqRouter);
 
 
 
