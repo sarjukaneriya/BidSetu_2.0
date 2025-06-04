@@ -1,7 +1,7 @@
-
-import cors from "cors"
+import cors from "cors";
 import express from "express";
 import cookieParser from "cookie-parser";
+
 
 const app=express();
 
@@ -15,11 +15,11 @@ app.use(cookieParser())
 
 
 
-//routes import
-
+// routes import
 import userRouter from "./routes/user.routes.js";
 
 import rfqRouter from "./routes/rfq.routes.js";
+
 
 
 
@@ -31,4 +31,8 @@ app.use("/api/rfq", rfqRouter);
 
 
 
-export {app}
+// routes declaration
+app.use("/api/v1/users", userRouter);
+app.use("/api/rfq", rfqRouter);
+
+export { app };
