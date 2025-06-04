@@ -12,8 +12,6 @@
   "dependencies": {
     "@emailjs/browser": "^4.3.3",
     "@reduxjs/toolkit": "^2.2.1",
-    "@stripe/react-stripe-js": "^2.7.0",
-    "@stripe/stripe-js": "^3.3.0",
     "axios": "^1.6.7",
     "chart.js": "^4.4.3",
     "country-state-city": "^3.2.1",
