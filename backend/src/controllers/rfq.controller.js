@@ -60,6 +60,15 @@ export const submitQuote = asyncHandler(async (req, res) => {
   const { price, deliveryDays, gstIncluded, comment } = req.body;
   const { rfqId } = req.params;
 
+
+  const existing = await Quote.findOne({ rfqId, sellerId: req.user._id });
+  if (existing) {
+    return res
+      .status(400)
+      .json(new ApiResponse(400, "Quote already submitted"));
+  }
+
+
   const quote = await Quote.create({
     rfqId,
     sellerId: req.user._id,
