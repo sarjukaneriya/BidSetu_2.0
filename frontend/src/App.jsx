@@ -25,6 +25,10 @@ import AdminHeader from "./admin/components/Header"
 import AdminLogin from "./admin/pages/Login"
 import AdminDashboard from "./admin/Admin"
 import ManageItems from "./components/ManageItems";
+import BuyerDashboard from "./pages/rfq/BuyerDashboard";
+import SellerDashboard from "./pages/rfq/SellerDashboard";
+import AdminRFQDashboard from "./pages/rfq/AdminDashboard";
+import ProtectedRoute from "./components/ProtectedRoute";
 
 
 const App = () => {
@@ -66,6 +70,30 @@ console.log(user,"...")
             <Route path="/edit-auction/:id" element={<EditAuction />} />
             <Route path="/success/:id" element={<PaymentSuccess />} />
             <Route path="/create-auction" element={<UploadItem />} />
+            <Route
+              path="/buyer"
+              element={
+                <ProtectedRoute role="buyer">
+                  <BuyerDashboard />
+                </ProtectedRoute>
+              }
+            />
+            <Route
+              path="/seller"
+              element={
+                <ProtectedRoute role="seller">
+                  <SellerDashboard />
+                </ProtectedRoute>
+              }
+            />
+            <Route
+              path="/admin/rfq"
+              element={
+                <ProtectedRoute role="admin">
+                  <AdminRFQDashboard />
+                </ProtectedRoute>
+              }
+            />
             <Route element={<userRoutes />}>
               <Route path="/create-auction" element={<UploadItem />} />
               {/* <Route path="/user-profile/manage-items" element={<ManageItems />} /> */}
