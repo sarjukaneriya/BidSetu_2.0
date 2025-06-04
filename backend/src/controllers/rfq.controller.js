@@ -45,6 +45,13 @@ export const postRFQ = asyncHandler(async (req, res) => {
 });
 
 
+  const existing = await Quote.findOne({ rfqId, sellerId: req.user._id });
+  if (existing) {
+    return res
+      .status(400)
+      .json(new ApiResponse(400, "Quote already submitted"));
+  }
+
 export const getMyRFQs = asyncHandler(async (req, res) => {
   const rfqs = await RFQ.find({ buyerId: req.user._id });
   res.json(new ApiResponse(200, "My RFQs", rfqs));
