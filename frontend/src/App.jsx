@@ -17,7 +17,6 @@ import UserProfile from "./pages/UserProfile";
 import EditAuction from "./pages/EditAuction";
 import ErrorPage from "./pages/ErrorPage";
 import Protected, { PublicRoute, SellerRoutes, AdminRoutes } from "./auth/Protected";
-import PaymentSuccess from "./pages/PaymentSuccess";
 import Admin from "./admin/Admin"
 import { useSelector } from "react-redux";
 import AdminFooter from "./admin/components/Footer"
@@ -68,7 +67,6 @@ console.log(user,"...")
           <Route element={<Protected />}>
             <Route path="/user-profile/*" element={<UserProfile />} />
             <Route path="/edit-auction/:id" element={<EditAuction />} />
-            <Route path="/success/:id" element={<PaymentSuccess />} />
             <Route path="/create-auction" element={<UploadItem />} />
             <Route
               path="/buyer"
