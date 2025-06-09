@@ -1,5 +1,8 @@
 # Real Time Reverse Auction Website using Mern Stack (Biding Website)
 
+BidSetu is an AI powered reverse auction application. A summary of the main
+features is available in [docs/FEATURES.md](docs/FEATURES.md). For a clean setup
+guide see [docs/PROJECT_SETUP_FROM_SCRATCH.md](docs/PROJECT_SETUP_FROM_SCRATCH.md).
 
 This project is built using the MERN (MongoDB, Express.js, React.js, Node.js) stack.
 
