@@ -14,6 +14,11 @@ npm start
 ```
 Runs on `http://localhost:5000`.
 
+To populate the database with demo users and RFQs you can run:
+```
+npm run seed
+```
+
 ### Frontend
 ```
 cd frontend
